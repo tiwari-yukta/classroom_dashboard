@@ -3,14 +3,13 @@
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  /* background-color: #f0f0f0; */
   gap: 20px;
 }
 .wrapper1{
-  width:350px;
+  width:80%;
+  max-width:350px;
   border-radius: 10px;
-  /* background-color: #77E4C8; */
-  padding: 30px 40px ;
+  padding: 30px 20px ;
   background: transparent;
   border: 1px solid rgb(72, 70, 70);
 }
@@ -75,7 +74,19 @@
 }
 
 button:hover {
-  /* background-color: #1eecdb;  */
-  color: white; 
+  color: black; 
   opacity: 60%;
+}
+
+@media (max-width: 768px) {
+  .wrapper1 {
+    width: 90%;
+    padding: 20px 10px;
+  }
+     .main{
+      flex-direction: column;
+    }
+      .wrapper1 h1 {
+    font-size: 18px; 
+  }
 }

@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import './LoginForm.css'
 import { FaUser } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
-import DashBoard from '../DashBoard/DashBoard';
+import Students from '../Students/Students';
+import Buttons from '../Buttons/SelectButtons';
 
 function LoginForm() {
   const [loginData, setLoginData] = useState({
@@ -28,7 +29,7 @@ function LoginForm() {
   };
 
   if (isLoggedIn) {
-    return <DashBoard />;
+    return <Buttons />;
   }
 
   return (
