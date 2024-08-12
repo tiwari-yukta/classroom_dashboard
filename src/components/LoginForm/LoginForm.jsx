@@ -2,14 +2,16 @@ import React, { useState } from 'react'
 import './LoginForm.css'
 import { FaUser } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
-import Students from '../Students/Students';
 import Buttons from '../Buttons/SelectButtons';
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
+
   const [loginData, setLoginData] = useState({
     username: '',
     password: '',
   })
+  
   const [isLoggedIn, setLoggedIn] = useState(false);
 
   const handleSubmit = (event) => {
@@ -18,7 +20,8 @@ function LoginForm() {
     const correctPassword = "admin";
     if (loginData.username === correctUsername && loginData.password === correctPassword) {
       setLoggedIn(true);
-    } else {
+    } 
+    else {
       console.error("Incorrect Credentials");
       alert("incorrect Credentials. Please try again")
     }

@@ -1,11 +1,13 @@
 .main{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   gap: 20px;
 }
+
 .wrapper1{
+  margin-top: 20px;
   width:80%;
   max-width:350px;
   border-radius: 10px;
